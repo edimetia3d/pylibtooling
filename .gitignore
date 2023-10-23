@@ -1,0 +1,7 @@
+venv
+build
+dist
+*.egg-info
+*.so
+download_cache
+cmake_build

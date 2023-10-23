@@ -1,0 +1,14 @@
+common_config:
+  cxx_flags: [ "-std=c++17", ]
+  include_directories: [
+    "${CFG_DIR}/../download_cache/17.0.2/clang/include",
+    "${CFG_DIR}/../download_cache/17.0.2/llvm/include",
+    "${CFG_DIR}/../cmake_build/llvm/include",
+    "${CFG_DIR}/../cmake_build/llvm/tools/clang/include",
+  ]
+
+io_configs:
+  - inputs: [
+    "glob('${CFG_DIR}/../download_cache/17.0.2/clang/include/clang/Tooling/**/*.h', recursive=True)",
+  ]
+    output: "${CFG_DIR}/_binding.cc.inc"
